@@ -23,3 +23,12 @@ function countCharacter(string) {
 
 const letter = countCharacter("Hello world");
 console.log(letter);
+
+// 02 -- is element exists
+
+function isExist(arr1, arr2) {
+  for (elm of arr1) {
+    return arr2.includes(elm) ? true : false;
+  }
+}
+console.log(isExist(["a", "b", "c"], [1, 2, 3]));
