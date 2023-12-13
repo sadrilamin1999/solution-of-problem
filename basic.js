@@ -1,31 +1,13 @@
-// write a function called getSum that takes two numbers and returns the sum of those two numbers
+// 01 -- write a function called getSum that takes two numbers and returns the sum of those two numbers
 
 function getSum(num1, num2) {
   return num1 + num2;
 }
 console.log(getSum(15, 25));
 
-// write a function called calculator that takes in 2 numbers and an operator and return the result of the calculation
+// 02 -- write a function called calculator that takes in 2 numbers and an operator and return the result of the calculation
 
 function calculator(number1, number2, operator) {
-  /* switch (operator) {
-    case "+":
-      return number1 + number2;
-      break;
-    case "-":
-      return number1 - number2;
-      break;
-    case "*":
-      return number1 * number2;
-      break;
-    case "/":
-      return number1 / number2;
-      break;
-    default:
-      throw new Error("not a valid operator");
-  } */
-  // simplified the code
-
   if (operator == "+") return number1 + number2;
   if (operator == "-") return number1 - number2;
   if (operator == "*") return number1 * number2;
@@ -34,3 +16,14 @@ function calculator(number1, number2, operator) {
   throw new Error("Not a valid operator");
 }
 console.log(calculator(45, 25, "+"));
+
+// 3 -- write a function called countOccurrences that takes in a string and a chracter that return the number of occurrence that character in that string
+
+function countOccurres(str, char) {
+  let count = 0;
+  for (letter of str) {
+    letter === char && count++;
+  }
+  return count;
+}
+console.log(countOccurres("hello world", "l"));
