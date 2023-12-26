@@ -27,3 +27,18 @@ function countOccurres(str, char) {
   return count;
 }
 console.log(countOccurres("hello world", "l"));
+
+// 4 -- write a function called upperCaseStr that takes in a string and return the the string first latter uppercase
+
+const upperCaseStr = (str) => {
+  console.log(str);
+  const lowerStr = str.toLowerCase();
+  console.log(lowerStr);
+  const splitStr = lowerStr.split(" ");
+  console.log(splitStr);
+  for (let i = 0; i < splitStr.length; i++) {
+    splitStr[i] = splitStr[i][0].toUpperCase() + splitStr[i].slice(1);
+  }
+  return splitStr.join(" ");
+};
+console.log(upperCaseStr("This is Sadril Amin and I am a developer"));
