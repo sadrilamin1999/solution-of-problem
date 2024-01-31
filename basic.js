@@ -21,7 +21,7 @@ console.log(calculator(45, 25, "+"));
 
 function countOccurres(str, char) {
   let count = 0;
-  for (letter of str) {
+  for (let letter of str) {
     letter === char && count++;
   }
   return count;
@@ -30,15 +30,22 @@ console.log(countOccurres("hello world", "l"));
 
 // 4 -- write a function called upperCaseStr that takes in a string and return the the string first latter uppercase
 
-const upperCaseStr = (str) => {
-  console.log(str);
-  const lowerStr = str.toLowerCase();
-  console.log(lowerStr);
-  const splitStr = lowerStr.split(" ");
-  console.log(splitStr);
-  for (let i = 0; i < splitStr.length; i++) {
-    splitStr[i] = splitStr[i][0].toUpperCase() + splitStr[i].slice(1);
-  }
-  return splitStr.join(" ");
+const uperCase = (str) => {
+  const splitStr = str.split(" ");
+  const uperStr = splitStr.map((item) => item[0].toUpperCase() + item.slice(1));
+  const uperSentence = uperStr.join(" ");
+  return uperSentence;
 };
-console.log(upperCaseStr("This is Sadril Amin and I am a developer"));
+console.log(uperCase("I am sadril amin shuvo"));
+
+// 5 -- Write a function that removeDuplicates that takes in two arrays and returns an array
+
+const remvodeDuplicate = (arr) => {
+  const resultArr = [];
+  for (num of arr) {
+    if (!resultArr.includes(num)) resultArr.push(num);
+  }
+  return resultArr;
+};
+
+console.log(remvodeDuplicate([1, 3, 3, 3, 3, 3, 5]));

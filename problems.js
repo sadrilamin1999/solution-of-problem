@@ -41,5 +41,6 @@ function isExists(arr1, arr2) {
     } else state = false;
   }
   return state;
+  ex;
 }
 console.log(isExists(["a", "b", "c"], [1, "b", 3]));

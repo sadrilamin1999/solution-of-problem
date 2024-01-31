@@ -1,12 +1,21 @@
 // write a function called lowerStr that takes in a string and return the the string first latter uppercase
 
-function lowerCaseStr(str) {
-  const lowerStr = str.toLowerCase();
-  const splitStr = lowerStr.split(" ");
-  for (let i = 0; i < splitStr.length; i++) {
-    splitStr[i] = splitStr[i][0].toUpperCase() + splitStr[i].slice(1);
+const uperCase = (str) => {
+  const splitStr = str.split(" ");
+  const uperStr = splitStr.map((item) => item[0].toUpperCase() + item.slice(1));
+  const uperSentence = uperStr.join(" ");
+  return uperSentence;
+};
+console.log(uperCase("I am sadril amin shuvo"));
+
+// Write a function that removeDuplicates that takes in two arrays and returns an array
+
+const remvodeDuplicate = (arr) => {
+  const resultArr = [];
+  for (num of arr) {
+    if (!resultArr.includes(num)) resultArr.push(num);
   }
-  console.log(splitStr);
-  return splitStr.join(" ");
-}
-console.log(lowerCaseStr("This is me and I am a software developer"));
+  return resultArr;
+};
+
+console.log(remvodeDuplicate([1, 3, 3, 3, 3, 3, 5]));
