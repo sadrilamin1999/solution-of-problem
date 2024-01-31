@@ -8,14 +8,16 @@ const uperCase = (str) => {
 };
 console.log(uperCase("I am sadril amin shuvo"));
 
-// Write a function that removeDuplicates that takes in two arrays and returns an array
+// Write a function called arrayIntersection that takes in two arrays and returns an array containing the interction of the two input arrays (i.e., the common elements that appear in both arrrays).
 
-const remvodeDuplicate = (arr) => {
-  const resultArr = [];
-  for (num of arr) {
-    if (!resultArr.includes(num)) resultArr.push(num);
+const arrayIntersection = (arr1, arr2) => {
+  let resultArr = [];
+  for (let num of arr1) {
+    if (arr2.includes(num)) {
+      resultArr.push(num);
+    }
   }
+  resultArr = Array.from(new Set(resultArr));
   return resultArr;
 };
-
-console.log(remvodeDuplicate([1, 3, 3, 3, 3, 3, 5]));
+console.log(arrayIntersection([1, 2, 2, 2, 5, 7, 7, 3], [7, 5, 2, 2, 3, 7]));
