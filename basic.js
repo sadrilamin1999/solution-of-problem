@@ -63,3 +63,35 @@ const arrayIntersection = (arr1, arr2) => {
   return resultArr;
 };
 console.log(arrayIntersection([1, 2, 2, 2, 5, 7, 7, 3], [7, 5, 2, 2, 3, 7]));
+
+// 07 -- Write a function called findMissingNumber that takes in an array of unique numbers from 1 to n (inclusive), where one number missing. It should return the missing number.
+
+const findMissingNumber = (arr) => {
+  let expectedTotal = 0;
+  let n = arr.length + 1;
+  let total = (n * (n + 1)) / 2;
+  console.log(total);
+  for (let i = 0; i < arr.length; i++) {
+    expectedTotal += arr[i];
+  }
+  const absentNumber = total - expectedTotal;
+  return absentNumber;
+};
+console.log(findMissingNumber([1, 2, 3, 4, 5, 6, 8, 9, 10]));
+
+// Given an integer x, return true if x is a palindrome, and false otherwise.
+const x = 151;
+const isPalindrom = (n) => {
+  let result;
+  const num = n;
+  const nArray = [...num.toString()].map(Number);
+  const fristNum = nArray[0];
+  const lastNum = nArray[nArray.length - 1];
+  if (fristNum === lastNum) {
+    result = true;
+  } else {
+    result = false;
+  }
+  return result;
+};
+console.log(isPalindrom(x));
